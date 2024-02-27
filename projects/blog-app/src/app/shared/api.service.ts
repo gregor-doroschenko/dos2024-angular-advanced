@@ -7,7 +7,9 @@ import { BehaviorSubject, Observable, Subject } from "rxjs";
 })
 export class ApiService {
 
+    // Erzeugt ein Subject
     subject$ = new Subject<string>();
+    // Erzeugt ein BehaviorSubject, der einen initialen Wert hat
     behaviourSubject$ = new BehaviorSubject<string>('initial value');
 
     constructor(private httpClient: HttpClient) {}

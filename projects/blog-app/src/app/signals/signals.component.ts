@@ -9,15 +9,15 @@ import { Component, computed, signal } from '@angular/core';
 })
 export class SignalsComponent {
 
-  count = signal<number>(0);
-  doubleCount = computed(() => this.count() * 2);
+  count = signal<number>(0); // Writeable signal
+  doubleCount = computed(() => this.count() * 2); // Computed signal und Read-only
 
   constructor() {
-    this.count.set(2);
+    this.count.set(2); // Set the value of the signal
   }
 
   increment(): void {
-    this.count.update(v => v + 1);
+    this.count.update(v => v + 1); // Update the value of the signal
   }
 
 }
