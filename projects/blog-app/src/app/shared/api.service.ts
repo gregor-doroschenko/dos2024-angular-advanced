@@ -13,7 +13,7 @@ export class ApiService {
     constructor(private httpClient: HttpClient) {}
 
     loadCharacters(): Observable<any[]> {
-        const url = 'stranger-things-api.fly.dev/api/v1/characters';
+        const url = 'https://stranger-things-api.fly.dev/api/v1/characters';
         return this.httpClient.get<any[]>(url);
     }
 }
